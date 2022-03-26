@@ -1,0 +1,63 @@
+
+def memory() { #Inital memory allocated determined from user entry
+	
+
+	get memory size user entered
+	memory = user entry	
+	return memory;
+}
+
+def partition() { #Partitions the processes with user defined memory size
+	
+	n = 0 #Number of processes
+	listen for process number, size, algorithm (P0,20000,B)
+	allocate memory to process 
+	n = n+1
+	return memory;
+}
+
+def free(memory) { #Returns how much free memoru is available
+
+	free = memory - allocated
+	return free
+}
+
+def allocate(memory,n) { #Allocate process using Best fit algorithm
+	
+	bestFit = MAX
+	pNum = NULL
+	for (i = 0; i < n; i++) {
+		if (P[i] >= memory and < bestFit) {
+			bestFit = P[i]
+			pNum = i
+}
+def release(memory) #Releses memory
+	release memory in partition
+
+def satus() {  #Shows the current status of proccesses and memory
+
+	print("Partitions [Allocated memory = " + memory() + "]")
+	for (number of processes) {
+		print("Address" + processAddress[i]
+	}
+	print ("Holes [Free memory = " + free() + "])
+	for (number of free partions) {
+		print("Address" + processAddress[i]
+	}
+} 
+
+def main() { 
+
+	memory = memory()
+	while(not exit) {
+		if userCommand = RQ
+			partition()
+		else if userCommand = RL
+			release()
+		else if userCommand = Status
+			status()
+		else
+			print("Invalid command")
+		
+	}
+}
