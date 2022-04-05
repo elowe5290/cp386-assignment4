@@ -67,24 +67,15 @@ int main(int argc, char *argv[]) {
 	char input[] = "";
 	int c = 0;
 	char *a[4];
-	//char *token;
+
 	char *command = NULL;
 
-	//while ((strcmp(input, ext1) != 0) || (strcmp(input, ext2) != 0)) { //While exit is not entered by user
-	while (strcmp(input, "Exit") != 0) {
+	while (strcmp(input, "Exit") != 0) { //While exit is not entered by user
 
 		printf("command>");
 		scanf("%s", input);
 		//scanf("%s%s%d%c", input, pnum, &size, algo);
 
-		//char *copy;
-		//copy = copyString(input);
-		//char *token = strtok(copy, " ");
-		//do {
-		//printf("%s PLEFASE WORK\n", input);
-
-		//a[c] = token;
-		//printf("%s PLEFASE WORK\n", a[c]);
 		command = strtok(input, " ");
 		//c++;
 		//} while (token != NULL);
@@ -95,12 +86,10 @@ int main(int argc, char *argv[]) {
 			command = strtok(NULL, " ");
 		}
 
-		//printf(" %s\n", token); //printing the token
-		//	/if ((strcmp(&input[0], "R") == 0) && (strcmp(&input[1], "Q") == 0)) { //If user imputs rq partiton
 		if (strcmp(a[0], "RQ") == 0) {
 
 			partition(m);
-			printf("Successfully allocted _ to process _\n");
+			printf("Successfully allocated _ to process _\n");
 
 		} else if (strcmp(a[0], "Status") == 0) {
 			continue;

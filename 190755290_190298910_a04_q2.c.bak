@@ -12,16 +12,6 @@ typedef struct process //represents a single thread, you can add more members if
 	int process[];
 } Process;
 
-//Process memoryT(int m) {
-//Process *memory;
-//int m; //User proposed memory
-//scanf("%d", &m);
-//printf("Allocated %d bytes of memory", m);
-//memory->memory = m;
-//memory->allocated = m;
-//return memory;
-
-//}
 char* copyString(char s[]) {
 	char *s2;
 	s2 = (char*) malloc(20);
@@ -55,6 +45,9 @@ void release(Process *memory, int n) { //Release function
 	memory->allocated = memory->allocated + memory->process[n];
 	memory->process[n] = 0;
 	printf("Successfully released memory for process P%d", n);
+}
+void allocate(Process *memory, int pnum, int size, char algo) {
+
 }
 
 int main(int argc, char *argv[]) {
@@ -106,17 +99,15 @@ int main(int argc, char *argv[]) {
 		//	/if ((strcmp(&input[0], "R") == 0) && (strcmp(&input[1], "Q") == 0)) { //If user imputs rq partiton
 		if (strcmp(a[0], "RQ") == 0) {
 
-			printf("RQ IS BEING CALLED IEF SO LETS GO \n");
-			printf("AAAAAA %s", a[2]);
+			partition(m);
+			printf("Successfully allocted _ to process _\n");
 
-		}
-//partition(memoryT);
-//} else if (strcmp(input, "Status") == 0) { //If user inputs status use status f inction
-//continue;
-//} else if (strcmp(input[0], "R") == 0 && strcmp(input[1], "l") == 0) { //If user inputs RL release memory
-//release()
-//	continue;
-		else {
+		} else if (strcmp(a[0], "Status") == 0) {
+			continue;
+		} else if (strcmp(a[0], "RL") == 0) {
+			release(m, 0);
+
+		} else {
 			printf("Invalid command: %s \n", input);
 
 		}
