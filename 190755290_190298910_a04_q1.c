@@ -1,3 +1,6 @@
+//Repoistory: https://github.com/elowe5290/cp386-assignment4
+//Ethan Lowe: elowe5290, Jonmarc Jackson: JcmcJc
+
 #include <stdio.h>
 #include<stdlib.h>
 #include <pthread.h>
